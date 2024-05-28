@@ -1,0 +1,84 @@
+﻿<Page x:Class="Beneficiari_practica.pages.Dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:local="clr-namespace:Beneficiari_practica.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Dashboard"
+      Background="White">
+
+    <Grid Style="{StaticResource grid_back}">
+        <StackPanel>
+            <Border Style="{StaticResource page_border}" MouseDown="DashboardField_Click">
+                <TextBlock Style="{StaticResource dashboard_page}">
+                    <StackPanel Style="{StaticResource dashboard_page_stack}">
+                        <Border Style="{StaticResource icon_border}" Background="#4fd1c5">
+                            <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource icon}" Foreground="White"/>
+                        </Border>
+                            <TextBlock Style="{StaticResource dashboard_page_text}">DashBoard</TextBlock>
+                    </StackPanel>
+                </TextBlock>
+            </Border>
+
+            <TextBlock Style="{StaticResource dashboard_page}">
+                <Border Style="{StaticResource border_page_stack}" MouseEnter="MouseEnter" MouseLeave="MouseLeave" MouseDown="Beneficiari_Click">
+                    <StackPanel Style="{StaticResource dashboard_page_stack}">
+                        <Border Style="{StaticResource icon_border}">
+                            <Icon:PackIconMaterial Kind="Table" Style="{StaticResource icon}"/>
+                        </Border>
+                            <TextBlock Style="{StaticResource dashboard_page_text}">Beneficiari</TextBlock>
+                    </StackPanel>
+                </Border>
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource dashboard_page}">
+                <Border Style="{StaticResource border_page_stack}" MouseEnter="MouseEnter" MouseLeave="MouseLeave" MouseDown="Location_Click">
+                    <StackPanel Style="{StaticResource dashboard_page_stack}">
+                        <Border Style="{StaticResource icon_border}">
+                            <Icon:PackIconMaterial Kind="SourceCommitStartNextLocal" Style="{StaticResource icon}"/>
+                        </Border>
+                            <TextBlock Style="{StaticResource dashboard_page_text}">Location</TextBlock>
+                    </StackPanel>
+                </Border>
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource dashboard_page}">
+                <Border Style="{StaticResource border_page_stack}" MouseEnter="MouseEnter" MouseLeave="MouseLeave" MouseDown="ShowChart_Click">
+                    <StackPanel Style="{StaticResource dashboard_page_stack}">
+                        <Border Style="{StaticResource icon_border}">
+                            <Icon:PackIconMaterial Kind="ChartBar" Style="{StaticResource icon}"/>
+                        </Border>
+                            <TextBlock Style="{StaticResource dashboard_page_text}">Diagram</TextBlock>
+                    </StackPanel>
+                </Border>
+            </TextBlock>
+
+            <Label>Account Pages</Label>
+
+            <TextBlock Style="{StaticResource dashboard_page}">
+                <Border Style="{StaticResource border_page_stack}" MouseEnter="MouseEnter" MouseLeave="MouseLeave">
+                    <StackPanel Style="{StaticResource dashboard_page_stack}">
+                        <Border Style="{StaticResource icon_border}">
+                            <Icon:PackIconMaterial Kind="FaceWomanProfile" Style="{StaticResource icon}"/>
+                        </Border>
+                            <TextBlock Style="{StaticResource dashboard_page_text}">Profile</TextBlock>
+                    </StackPanel>
+                </Border>
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource dashboard_page}">
+                <Border Style="{StaticResource border_page_red}" MouseDown="LogoutCase" MouseEnter="MouseEnter" MouseLeave="MouseLeave">
+                    <StackPanel Style="{StaticResource dashboard_page_stack}">
+                        <Border Style="{StaticResource icon_border}">
+                            <Icon:PackIconMaterial Kind="Logout" Foreground="Red" Style="{StaticResource icon}"/>
+                        </Border>
+                            <TextBlock Style="{StaticResource dashboard_page_text}">Logout</TextBlock>
+                    </StackPanel>
+                </Border>
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>

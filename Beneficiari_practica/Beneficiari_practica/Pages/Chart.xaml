@@ -1,0 +1,33 @@
+﻿<Page x:Class="Beneficiari_practica.Pages.Chart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Beneficiari_practica.Pages" 
+      xmlns:Wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+      mc:Ignorable="d" 
+      Height="800" Width="1440"
+      Title="Chart"
+      Background="Transparent">
+
+    <Grid>
+        <Button Content="Refresh diagram" VerticalAlignment="Top"  Margin="1082,53,228,0"  Style="{StaticResource button_beneficiari}" Click="refreshData" MouseEnter="MouseEnter" MouseLeave="MouseLeave"/>
+
+
+        <Wpf:PieChart Name="Doughnut"
+                      Series="{Binding SeriesCollection}"
+                      LegendLocation="Right"
+                      InnerRadius="90"
+                      Margin="621,114,228,242"
+                      Panel.ZIndex="999"
+            />
+        <Wpf:PieChart Name="Doughnut1"
+                      Series="{Binding SeriesCollection1}"
+                      LegendLocation="Right"
+                      InnerRadius="90"
+                      Margin="39,114,877,242"
+                      Panel.ZIndex="999"
+            />
+
+    </Grid>
+</Page>

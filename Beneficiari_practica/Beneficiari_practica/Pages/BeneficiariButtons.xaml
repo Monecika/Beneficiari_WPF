@@ -1,0 +1,190 @@
+﻿<Page x:Class="Beneficiari_practica.Pages.BeneficiariButtons"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:local="clr-namespace:Beneficiari_practica.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1440"
+      Title="BeneficiariButtons">
+
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </Page.Resources>
+    
+    <Grid>
+
+        <StackPanel Orientation="Horizontal" Height="50" VerticalAlignment="Top" Margin="0 15">
+            <TextBlock Text="Beneficiari" VerticalAlignment="Center" Margin="30 0 0 0" Style="{StaticResource textblock_beneficiari}"/>
+            <Button Content="Add new Beneficiari" VerticalAlignment="Center"  Margin="890 0 0 0"  Style="{StaticResource button_beneficiari}" Click="AddButton_Click" MouseEnter="MouseEnter" MouseLeave="MouseLeave"/>
+            <Button Content="Export Data" VerticalAlignment="Center"  Margin="20 0 0 0"  Style="{StaticResource button_beneficiari}" Click="ExportData" MouseEnter="MouseEnter" MouseLeave="MouseLeave"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="20 60">
+            <Border Height="20" Margin="10 0 0 0" Style="{StaticResource border_underline}">
+                <TextBlock Text="Beneficiari" VerticalAlignment="Center" Style="{StaticResource textblock_changer}"/>
+            </Border>
+            <Border Height="20" Margin="10 0 0 0" Style="{StaticResource border_underline}">
+                <TextBlock Text="Numere" VerticalAlignment="Center" Style="{StaticResource textblock_changer}"/>
+            </Border>
+            <Border Height="20" Margin="10 0 0 0" Style="{StaticResource border_underline}">
+                <TextBlock Text="Email-uri" VerticalAlignment="Center" Style="{StaticResource textblock_changer}"/>
+            </Border>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"  Height="30" Margin="0 90" VerticalAlignment="Top">
+            <TextBlock Text="31 Beneficiari" Margin="20 0" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="940 0 0 0" VerticalAlignment="Center">
+                <Label Content="Filter by"/>
+                <Grid Width="180" HorizontalAlignment="Left">
+                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False" Panel.ZIndex="1" Text="Search here ..." Visibility="{Binding ElementName=txtSearch, Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
+                    <TextBox x:Name="txtSearch" Style="{StaticResource textboxSearch}" TextChanged="txtSearch_TextChanged"/>
+                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center" Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" x:Name="dataGrid" Margin="0,130,0,15">
+            <DataGrid.Columns >
+                <DataGridCheckBoxColumn CanUserResize="True" Width="auto" ElementStyle="{StaticResource CheckBoxStyle1}" x:Name="Checkbox_Column">
+                    <DataGridCheckBoxColumn.HeaderTemplate>
+                        <DataTemplate >
+                            <CheckBox Style="{StaticResource CheckBoxStyle1}" Checked="CheckAllCheckBoxes" Unchecked="UncheckAllCheckBoxes" MouseEnter="MouseEnter" MouseLeave="MouseLeave"/>
+                        </DataTemplate>
+                    </DataGridCheckBoxColumn.HeaderTemplate>
+                </DataGridCheckBoxColumn>
+
+                <DataGridTextColumn Header="BeneficiarID" IsReadOnly="True" CanUserResize="False" Width="auto" Binding="{Binding BenificiarId}"/>
+                <DataGridTextColumn Header="Name" IsReadOnly="True" Width="auto" Binding="{Binding Nume}"/>
+                <DataGridTextColumn Header="Surname" IsReadOnly="True" Width="auto" Binding="{Binding Prenume}"/>
+                <DataGridTextColumn Header="Adress" IsReadOnly="True" Width="auto" Binding="{Binding Adresa}"/>
+                <DataGridTextColumn Header="Document ID" IsReadOnly="True" Width="auto" Binding="{Binding TipDocument}"/>
+                <DataGridTextColumn Header="Phone" IsReadOnly="True" Width="auto" Binding="{Binding Telefon}"/>
+                <DataGridTextColumn Header="Location" IsReadOnly="True" Width="auto" Binding="{Binding Mediul}"/>
+                <DataGridTextColumn Header="Location Code" IsReadOnly="True" Width="auto" Binding="{Binding CodLocalitate}"/>
+                <DataGridTextColumn Header="Card Number" IsReadOnly="True" Width="auto" Binding="{Binding NumarCont}"/>
+                <DataGridTextColumn Header="Sum" IsReadOnly="True" Width="auto" Binding="{Binding Suma}"/>
+
+                <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource gridEditButton}" Click="EditButton_click" MouseEnter="MouseEnter" MouseLeave="MouseLeave">
+                                    <Icon:PackIconMaterial Kind="PencilOutline" Style="{StaticResource pagingButtonIcon}" />
+                                </Button>
+                                <Button Style="{StaticResource gridRemoveButton}" Margin="5 0 0 0" Click="DeleteButton_Click" MouseEnter="MouseEnter" MouseLeave="MouseLeave">
+                                    <Icon:PackIconMaterial Kind="DeleteOutline" Style="{StaticResource pagingButtonIcon}"/>
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Popup Placement="Center" x:Name="addBeneficiary" Style="{StaticResource popup_width}">
+            <Border Style="{StaticResource popup_border}">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nume" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_name" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Prenume" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_surname" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Adresa" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_address" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Document" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_document" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Telefon" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_phone" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Mediul" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_mediul" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Cod Localitate" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_codLocalitate" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Card Number" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_cardNumber" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Suma" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_sum" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Email" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="add_email" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Enter" Click="add_EnterButton_Click"  Margin="10" Width="50"/>
+                        <Button Content="Close" Click="add_CloseButton_Click" Margin="10" Width="50"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </Border>
+        </Popup>
+
+        <Popup Placement="Center" x:Name="updateBeneficiary" Style="{StaticResource popup_width}">
+            <Border Style="{StaticResource popup_border}">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Nume" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_name" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Prenume" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_surname" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Adresa" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_address" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Document" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_document" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Telefon" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_phone" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Mediul" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_mediul" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Cod Localitate" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_codLocalitate" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Card Number" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_cardNumber" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Suma" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_sum" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Email" Style="{StaticResource popup_label_width}"/>
+                        <TextBox x:Name="update_email" Style="{StaticResource popup_textbox}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Enter" Click="update_EnterButton_Click"  Margin="10" Width="50"/>
+                        <Button Content="Close" Click="update_CloseButton_Click" Margin="10" Width="50"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
+    </Grid>
+</Page>

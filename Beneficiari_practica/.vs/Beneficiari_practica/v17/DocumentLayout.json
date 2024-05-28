@@ -1,0 +1,148 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\pages\\beneficiaributtons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\pages\\beneficiaributtons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\pages\\beneficiaributtons.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\pages\\beneficiaributtons.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\pages\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\pages\\dashboard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\pages\\chart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\pages\\chart.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|c:\\users\\mona\\desktop\\practica\\beneficiari_practica\\beneficiari_practica\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{16B815FB-EC50-4692-90D6-52CAF3FF6840}|Beneficiari_practica\\Beneficiari_practica.csproj|solutionrelative:beneficiari_practica\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 355,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainWindow.xaml",
+              "RelativeToolTip": "Beneficiari_practica\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-28T11:42:34.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BeneficiariButtons.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\BeneficiariButtons.xaml.cs",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\Pages\\BeneficiariButtons.xaml.cs",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\BeneficiariButtons.xaml.cs",
+              "RelativeToolTip": "Beneficiari_practica\\Pages\\BeneficiariButtons.xaml.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAYwGwAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T09:39:01.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Chart.xaml",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\Chart.xaml",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\Pages\\Chart.xaml",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\Chart.xaml",
+              "RelativeToolTip": "Beneficiari_practica\\Pages\\Chart.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-27T11:36:08.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BeneficiariButtons.xaml",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\BeneficiariButtons.xaml",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\Pages\\BeneficiariButtons.xaml",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\BeneficiariButtons.xaml",
+              "RelativeToolTip": "Beneficiari_practica\\Pages\\BeneficiariButtons.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-27T11:32:15.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Dashboard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\Dashboard.xaml.cs",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\Pages\\Dashboard.xaml.cs",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\Pages\\Dashboard.xaml.cs",
+              "RelativeToolTip": "Beneficiari_practica\\Pages\\Dashboard.xaml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAA1wDQAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T11:29:55.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainPage.xaml.cs",
+              "RelativeToolTip": "Beneficiari_practica\\MainPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T11:27:08.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainPage.xaml",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainPage.xaml",
+              "RelativeToolTip": "Beneficiari_practica\\MainPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-27T11:27:05.655Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Beneficiari_practica\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\mona\\Desktop\\practica\\Beneficiari_practica\\Beneficiari_practica\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Beneficiari_practica\\MainWindow.xaml.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAewEQAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-27T11:13:55.82Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

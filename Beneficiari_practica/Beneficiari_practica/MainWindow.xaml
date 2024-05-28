@@ -1,0 +1,171 @@
+﻿<Window x:Class="Beneficiari_practica.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beneficiari_practica"
+        mc:Ignorable="d"
+        Title="Login" Height="800" Width="1440"
+        WindowStartupLocation="CenterScreen"
+        Background="#f4f7fe">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="45*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="75*"/>
+            <RowDefinition Height="15*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Margin="0 130 0 0">
+            <Label Name="lbl_welcome" Content="Welcome Back" FontSize="30" Foreground="#4fd1c5" FontWeight="Bold" FontFamily="Times New Roman"/>
+            <Label Name="lbl_welcome_para" Content="Enter the email and the password to sign in" FontSize="20" Foreground="Gray" FontFamily="Times New Roman"/>
+
+            <Label Name="lbl_Username" Content="Username" Margin="0 20 0 0" FontSize="16" FontFamily="Times New Roman"/>
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="5 2 0 0" CornerRadius="8" HorizontalAlignment="Left" Width="220" Height="25">
+                <TextBox Name="textBox_username" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Margin="2 0 0 0"/>
+            </Border>
+
+            <Label Name="lbl_Password" Content="Password" Margin="0 20 0 0" FontSize="16" FontFamily="Times New Roman"/>
+            <Border BorderBrush="Gray" BorderThickness="1" Margin="5 2 0 0" CornerRadius="8" HorizontalAlignment="Left" Width="220" Height="25">
+                <PasswordBox Name="textBox_pass" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Margin="2 0 0 0"/>
+            </Border>
+
+            <StackPanel Name="SignIn_Change" Visibility="Collapsed">
+                <Label Name="lbl_email" Content="Email" Margin="0 20 0 0" FontSize="16" FontFamily="Times New Roman"/>
+                <Border BorderBrush="Gray" BorderThickness="1" Margin="5 2 0 0" CornerRadius="8" HorizontalAlignment="Left" Width="220" Height="25">
+                    <TextBox Name="textBox_email" BorderThickness="0" Background="Transparent" VerticalAlignment="Center" Margin="2 0 0 0" />
+                </Border>
+            </StackPanel>
+
+            <RadioButton Name="radio_Remember" Margin="0 15 0 0" Content="Remember me"/>
+
+            <Border Margin="0 20 0 0" CornerRadius="10" BorderBrush="gray" BorderThickness="1" Width="220" 
+                    HorizontalAlignment="Left" Background="#4fd1c5" Name="SignIn_btn_border">
+                <Button Name="btn_SignIn" Content="SIGN IN" Foreground="White" BorderThickness="0" Width="220" Height="28" 
+                        HorizontalAlignment="Left" VerticalAlignment="Center" 
+                        MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" Click="btn_SignIn_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+
+            <Border Margin="0 20 0 0" CornerRadius="10" BorderBrush="gray"
+                    BorderThickness="1" Width="220" HorizontalAlignment="Left" Background="#4fd1c5"
+                    Name="SignUp_btn_border"  Visibility="Collapsed">
+                <Button Name="btn_SignUp" Content="SIGN UP" Foreground="White" BorderThickness="0" Width="220" Height="28" 
+                        HorizontalAlignment="Left" VerticalAlignment="Center"
+                        MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" Click="btn_SignUp_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="Button">
+                                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Border>
+
+            <StackPanel Orientation="Horizontal" Margin="10 10 0 0" Name="stack_NoAccount">
+                <Label Name="lbl_noAccount" Foreground="Gray" FontFamily="Times New Roman" FontSize="15" Content="Don't have an account?"/>
+                <Label Name="lbl_signUp" Foreground="#4fd1c5" FontFamily="Times New Roman" FontSize="15" Content="Sign Up" FontWeight="Bold" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseDown="lbl_signUp_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10 10 0 0" Name="stack_Account" Visibility="Collapsed">
+                <Label Name="lbl_Account" Foreground="Gray" FontFamily="Times New Roman" FontSize="15" Content="Already have an account?"/>
+                <Label Name="lbl_signin" Foreground="#4fd1c5" FontFamily="Times New Roman" FontSize="15" Content="Sign In" FontWeight="Bold" MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave" MouseDown="lbl_signin_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+            <Image Source="img/chakra.png" Stretch="UniformToFill" Height="690"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <TextBlock FontFamily="Times New Roman" FontSize="13" VerticalAlignment="Center" >
+        <Run Text="2021, Made with "/>
+        <Run Text="love" Foreground="#ea534d"/>
+        <Run Text=" by "/>
+        <Run Text="Creative Tim" Foreground="#4fd1c5"/>
+        <Run Text=" and "/>
+        <Run Text="Simple" Foreground="#4fd1c5"/>
+        <Run Text=" For a better web"/>
+            </TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center">
+            <Label Content="Creative Tim" Foreground="Gray" Margin="50 0 0 0"/>
+            <Label Content="Simple" Foreground="Gray" Margin="10 0 0 0"/>
+            <Label Content="Blog" Foreground="Gray" Margin="10 0 0 0"/>
+            <Label Content="License" Foreground="Gray" Margin="10 0 0 0"/>
+        </StackPanel>
+
+        <StackPanel Grid.ColumnSpan="3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="20*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="1" CornerRadius="12" BorderThickness="1" Background="#E0fbfbfd" BorderBrush="Gray" Margin="0 10 0 0">
+                    <StackPanel Grid.Column="1" Height="60" Background="Transparent" VerticalAlignment="Center" Orientation="Horizontal">
+                        <StackPanel VerticalAlignment="Center" Margin="10 0">
+                            <Label Content="PURITY UI DASHBOARD" FontSize="14" FontFamily="Times New Roman"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="120 0">
+                            <Label Content="DASHBOARD" FontFamily="Times New Roman"/>
+                            <Label Content="PROFILE" FontFamily="Times New Roman"/>
+                            <Label Content="SIGN UP" FontFamily="Times New Roman"/>
+                            <Label Content="SIGN IN" FontFamily="Times New Roman"/>
+                        </StackPanel>
+                        <StackPanel VerticalAlignment="Center" Margin="10 0">
+                            <Border CornerRadius="10" BorderThickness="0" Background="#293051">
+                                <Button Foreground="White" Background="Transparent" BorderThickness="0"
+                                MouseEnter="Label_MouseEnter" MouseLeave="Label_MouseLeave"
+                                Content="Free Download" Height="30" Width="100">
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="10">
+                                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                        </Border>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </Border>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

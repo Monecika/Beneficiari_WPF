@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\chakra.png" />
+    <None Remove="img\green\chart-simple-solid.png" />
+    <None Remove="img\green\file-solid.png" />
+    <None Remove="img\green\house-solid.png" />
+    <None Remove="img\green\rocket-solid.png" />
+    <None Remove="img\green\screwdriver-solid.png" />
+    <None Remove="img\green\user-solid.png" />
+    <None Remove="img\green\wallet-solid.png" />
+    <None Remove="img\white\chart-simple-solid.png" />
+    <None Remove="img\white\file-solid.png" />
+    <None Remove="img\white\house-solid.png" />
+    <None Remove="img\white\rocket-solid.png" />
+    <None Remove="img\white\screwdriver-solid.png" />
+    <None Remove="img\white\user-solid.png" />
+    <None Remove="img\white\wallet-solid.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Microsoft.Data.SqlClient.SNI.runtime" Version="5.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\chakra.png" />
+    <Resource Include="img\green\chart-simple-solid.png" />
+    <Resource Include="img\green\file-solid.png" />
+    <Resource Include="img\green\house-solid.png" />
+    <Resource Include="img\green\rocket-solid.png" />
+    <Resource Include="img\green\screwdriver-solid.png" />
+    <Resource Include="img\green\user-solid.png" />
+    <Resource Include="img\green\wallet-solid.png" />
+    <Resource Include="img\white\chart-simple-solid.png" />
+    <Resource Include="img\white\file-solid.png" />
+    <Resource Include="img\white\house-solid.png" />
+    <Resource Include="img\white\rocket-solid.png" />
+    <Resource Include="img\white\screwdriver-solid.png" />
+    <Resource Include="img\white\user-solid.png" />
+    <Resource Include="img\white\wallet-solid.png" />
+  </ItemGroup>
+
+</Project>
